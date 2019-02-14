@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<script>
+        function check_null(id)
+        {
+	         var email = document.getElementById(id).value;
+
+             if(email.length==0)
+               {
+                document.getElementById(id).setAttribute("class","locate_error");
+               } 
+        }
+        
+        function sayhi()
+        {document.write("hello");}
+    </script>
+    <style>
+        .locate_error
+        {
+            border-top:none; border-left:none; border-right:none;
+            background-color: lightcoral;
+            height:22px; width:280px; 
+            border-bottom-color:red;
+            font-size:17px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+<center><img src="../images/logo.jpg" height="200px" width="200px"></center>
+<br><br>
+<b><center><font face="Copperplate Gothic Bold" size="6"><b>Your First Step To Your Dream Home</b></font></center>
+</div><br><br><br>
+<form>
+			<input type="text" id="emailAddress" name="emailAddress" maxlength="50"  onblur="check_null('emailAddress')">
+			<input type="text" id="confirm_email" name="confirm_email" maxlength="50"  onblur="check_null('confirm_email')">
+			<input type="submit" value="SUBMIT"  id="submit_email" onclick="sayhi()">
+		</form>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+	<center>
+        <div class="footer">
+            <img src="..\images\logo.jpg" width="140px" height="140px"><br>
+            <font face="BrowalliaUPC">Privacy Policy | Terms of Use</font>
+            <br> 
+            <font face="BrowalliaUPC">@ Copyright 2018 Century 21 Department Store</font>
+    
+        </div>
+	</center>
+
+</body>
+</html>
